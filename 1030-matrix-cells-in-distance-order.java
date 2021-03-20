@@ -1,7 +1,5 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
 
 class Solution {
     public int[][] allCellsDistOrder(int r, int c, int r0, int c0) {
@@ -9,13 +7,16 @@ class Solution {
     }
 
     private int[][] getAllCells(int R, int C) {
-        List<int[]> cells = new ArrayList<>();
+        int[][] cells = new int[R*C][2];
+        int k = 0;
         for (int i = 0; i < R; i++) {
             for (int j = 0; j < C; j++) {
-                cells.add(new int[]{i, j});
+                cells[k][0] = i;
+                cells[k][1] = j;
+                k++;
             }
         }
-        return cells.toArray(new int[0][]);
+        return cells;
     }
 
     private int[][] sort(int[][] cells, int r0, int c0) {
