@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
 
-class Solution {
+class _1030MatrixCellsInDistanceOrder {
     public int[][] allCellsDistOrder(int r, int c, int r0, int c0) {
         return sort(getAllCells(r, c), r0, c0);
     }
@@ -37,7 +37,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        _1030MatrixCellsInDistanceOrder solution = new _1030MatrixCellsInDistanceOrder();
         System.out.println(Arrays.deepToString(solution.allCellsDistOrder(2, 3, 1, 2)));
     }
 }
