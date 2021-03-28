@@ -1,7 +1,7 @@
 public class _69Sqrt {
     public int mySqrt(int x) {
         double result = x;
-        double diff = 1;
+        double diff = 0.1;
         while (diff < Math.abs(x - result * result)) {
             result = (result + x / result) / 2.0;
         }
